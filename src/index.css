@@ -1,0 +1,153 @@
+.main-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.chart-container {
+    width: 100%;
+    margin-top: 50px;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    overflow: hidden;
+}
+
+.chart-wrapper {
+    min-width: 1200px;
+}
+
+.timeline-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.header-row span {
+    flex: 1;
+    text-align: center;
+}
+
+/* Tùy chỉnh chiều cao của Timeline */
+.rct-scroll {
+    height: 800px; /* Đặt chiều cao mong muốn */
+}
+
+.rct-horizontal-lines {
+    height: 800px; /* Đặt chiều cao cho các đường ngang */
+}
+
+.select-container {
+    position: fixed; /* Giữ cố định khi cuộn */
+    top: 0; /* Cố định ở đầu */
+    background-color: #fff; /* Nền trắng để không bị che */
+    z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
+    padding: 10px 0; /* Thêm khoảng cách trên dưới */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    text-align: center; /* Căn giữa nội dung */
+    border-bottom: 1px solid #ddd; /* Đường viền dưới */
+}
+
+.select-container label {
+    font-size: 18px; /* Tăng kích thước chữ của nhãn */
+    font-weight: bold; /* In đậm nhãn */
+    margin-right: 10px; /* Khoảng cách giữa nhãn và select box */
+}
+
+.select-container select {
+    font-size: 16px; /* Tăng kích thước chữ của select box */
+    padding: 5px 10px; /* Thêm khoảng cách trong select box */
+    border: 1px solid #ccc; /* Đường viền của select box */
+    border-radius: 4px; /* Bo góc */
+    outline: none; /* Xóa viền khi focus */
+    cursor: pointer; /* Thêm con trỏ dạng tay */
+}
+
+/* CSS FOR SCHEDULE */
+
+.schedule-container {
+    overflow: auto; /* Cho phép cuộn cả chiều ngang và dọc */
+    max-height: 600px; /* Đặt chiều cao tối đa cho bảng */
+}
+
+.schedule-container table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Đảm bảo các cột có kích thước cố định */
+}
+
+.schedule-container th,
+.schedule-container td {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 8px;
+    width: 90px;
+    white-space: nowrap; /* Không cho phép xuống dòng */
+}
+
+.schedule-container th {
+    background-color: #f4f4f4;
+    position: sticky;
+    top: 0; /* Cố định dòng tiêu đề khi cuộn dọc */
+    z-index: 2; /* Đảm bảo dòng tiêu đề nằm trên các ô khác */
+}
+
+.schedule-container td:first-child,
+.schedule-container th:first-child {
+    position: sticky;
+    left: 0; /* Cố định cột "Nhân viên" khi cuộn ngang */
+    background-color: #fff; /* Đặt nền trắng để cột không bị che */
+    z-index: 1; /* Đảm bảo cột "Nhân viên" nằm trên các ô khác */
+}
+
+.schedule-container .assigned {
+    background-color: blue; /* Màu xanh lá cho công đoạn được phân công */
+    color: #fff;
+}
+
+.schedule-container .registered {
+    background-color: #ffc107; /* Màu vàng cho ca đã đăng ký */
+    color: #000;
+}
+
+.schedule-container .not-registered {
+    background-color: #f44336; /* Màu đỏ cho ca không đăng ký */
+    color: #fff;
+}
+
+/* CSS FOR KPI */
+.kpi-list-container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.kpi-list-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.kpi-list-container th,
+.kpi-list-container td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.kpi-list-container th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.kpi-list-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

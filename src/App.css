@@ -1,0 +1,7 @@
+/* Thêm vào file SCSS hoặc CSS */
+.react-calendar-timeline .rct-header-root {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background: white;
+}

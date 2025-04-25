@@ -1,0 +1,207 @@
+[
+    {
+        "id": "W001",
+        "name": "Nguyễn Văn A",
+        "position": "Nhân viên cắt vải",
+        "workDays": [
+            {
+                "shift": 1,
+                "startTime": "2025-03-18 01:00",
+                "endTime": "2025-03-18 09:00"
+            }
+        ]
+    },
+    {
+        "id": "W002",
+        "name": "Phạm Thị D",
+        "position": "Nhân viên cắt vải",
+        "workDays": [
+            {
+                "shift": 2,
+                "startTime": "2025-03-18 09:00",
+                "endTime": "2025-03-18 17:00"
+            }
+        ]
+    },
+    {
+        "id": "W003",
+        "name": "Đinh Văn Luận",
+        "position": "Nhân viên cắt vải",
+        "workDays": [
+            {
+                "shift": 3,
+                "startTime": "2025-03-17 17:00",
+                "endTime": "2025-03-18 01:00"
+            }
+        ]
+    },
+    {
+        "id": "W004",
+        "name": "Dương Văn Giới",
+        "position": "Nhân viên cắt vải",
+        "workDays": [
+            {
+                "shift": 2,
+                "startTime": "2025-03-18 09:00",
+                "endTime": "2025-03-18 17:00"
+            }
+        ]
+    },
+    {
+        "id": "W005",
+        "name": "Nguyễn Đức Phú",
+        "position": "Nhân viên cắt vải",
+        "workDays": [
+            {
+                "shift": 1,
+                "startTime": "2025-03-18 01:00",
+                "endTime": "2025-03-18 09:00"
+            }
+        ]
+    },
+    {
+        "id": "W006",
+        "name": "Nguyễn Thị E",
+        "position": "Nhân viên may",
+        "workDays": [
+            {
+                "shift": 2,
+                "startTime": "2025-03-19 09:00",
+                "endTime": "2025-03-19 17:00"
+            },
+            {
+                "shift": 2,
+                "startTime": "2025-03-20 09:00",
+                "endTime": "2025-03-20 17:00"
+            }
+        ]
+    },
+    {
+        "id": "W007",
+        "name": "Trần Thị B",
+        "position": "Nhân viên may",
+        "workDays": [
+            {
+                "shift": 1,
+                "startTime": "2025-03-19 01:00",
+                "endTime": "2025-03-19 09:00"
+            },
+            {
+                "shift": 1,
+                "startTime": "2025-03-20 01:00",
+                "endTime": "2025-03-20 09:00"
+            }
+        ]
+    },
+    {
+        "id": "W008",
+        "name": "Nguyễn Văn Thanh",
+        "position": "Nhân viên may",
+        "workDays": [
+            {
+                "shift": 1,
+                "startTime": "2025-03-19 01:00",
+                "endTime": "2025-03-19 09:00"
+            },
+            {
+                "shift": 3,
+                "startTime": "2025-03-19 17:00",
+                "endTime": "2025-03-20 01:00"
+            }
+        ]
+    },
+    {
+        "id": "W009",
+        "name": "Trần Văn Chính",
+        "position": "Nhân viên may",
+        "workDays": [
+            {
+                "shift": 2,
+                "startTime": "2025-03-19 09:00",
+                "endTime": "2025-03-19 17:00"
+            },
+            {
+                "shift": 2,
+                "startTime": "2025-03-20 09:00",
+                "endTime": "2025-03-20 17:00"
+            }
+        ]
+    },
+    {
+        "id": "W010",
+        "name": "Trần Phi Đức",
+        "position": "Nhân viên may",
+        "workDays": [
+            {
+                "shift": 3,
+                "startTime": "2025-03-18 17:00",
+                "endTime": "2025-03-19 01:00"
+            },
+            {
+                "shift": 3,
+                "startTime": "2025-03-19 17:00",
+                "endTime": "2025-03-20 01:00"
+            }
+        ]
+    },
+    {
+        "id": "W011",
+        "name": "Lê Văn Trang",
+        "position": "Nhân viên đóng gói",
+        "workDays": [
+            {
+                "shift": 1,
+                "startTime": "2025-03-20 01:00",
+                "endTime": "2025-03-20 09:00"
+            }
+        ]
+    },
+    {
+        "id": "W012",
+        "name": "Hoàng Hải Phong",
+        "position": "Nhân viên đóng gói",
+        "workDays": [
+            {
+                "shift": 2,
+                "startTime": "2025-03-20 09:00",
+                "endTime": "2025-03-20 17:00"
+            }
+        ]
+    },
+    {
+        "id": "W013",
+        "name": "Nguyễn Trọng Khánh Duy",
+        "position": "Nhân viên đóng gói",
+        "workDays": [
+            {
+                "shift": 1,
+                "startTime": "2025-03-20 01:00",
+                "endTime": "2025-03-20 09:00"
+            }
+        ]
+    },
+    {
+        "id": "W014",
+        "name": "Hà Duy Bách",
+        "position": "Nhân viên đóng gói",
+        "workDays": [
+            {
+                "shift": 3,
+                "startTime": "2025-03-19 17:00",
+                "endTime": "2025-03-20 01:00"
+            }
+        ]
+    },
+    {
+        "id": "W015",
+        "name": "Lương Hải Đăng",
+        "position": "Nhân viên đóng gói",
+        "workDays": [
+            {
+                "shift": 3,
+                "startTime": "2025-03-19 17:00",
+                "endTime": "2025-03-20 01:00"
+            }
+        ]
+    }
+]

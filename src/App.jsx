@@ -28,16 +28,31 @@ const predefinedColors = [
     "#FFC300", // Màu vàng
     "#8E44AD", // Màu tím
     "#1ABC9C", // Màu xanh ngọc
+    "#FF8C00", // Màu cam sáng
+    "#DA70D6", // Màu tím nhạt
+    "#20B2AA", // Màu xanh lam nhạt
+];
+
+const commandIds = [
+    "LSX0001",
+    "LSX0002",
+    "LSX0003",
+    "LSX0004",
+    "LSX0005",
+    "LSX0006",
+    "LSX0007",
+    "LSX0008",
+    "LSX0009",
+    "LSX0010",
 ];
 
 // Gán màu cho từng commandId
 const commandColors = {};
-scheduleData.forEach((op, index) => {
-    if (!commandColors[op.commandId]) {
-        commandColors[op.commandId] =
-            predefinedColors[index % predefinedColors.length];
-    }
+commandIds.forEach((id, index) => {
+    commandColors[id] = predefinedColors[index];
 });
+
+console.log("Command Colors:", commandColors);
 
 const processData = (commandId = "All") => {
     const groups = [];
@@ -66,8 +81,6 @@ const processData = (commandId = "All") => {
             const endTime = moment(
                 `${detail.day}T${shiftTimes[detail.shift].end}`
             );
-
-            console.log(op.id + ": " + endTime);
 
             const key = `${startTime}-${endTime}`;
             if (!itemMap[key]) {

@@ -257,6 +257,7 @@ const App = () => {
                                     backgroundColor: item.color,
                                     color: "#fff",
                                     textAlign: "center",
+                                    overflow: "hidden",
                                 }}
                                 onMouseEnter={(e) => {
                                     setHoveredItem(item);
@@ -276,10 +277,18 @@ const App = () => {
                             </div>
                         );
                     }}
+                    timeSteps={{
+                        second: 0,
+                        minute: 0,
+                        hour: 6, // 👉🏻 mỗi bước 6 tiếng
+                        day: 1,
+                        month: 1,
+                        year: 1,
+                    }}
                 >
                     <TimelineHeaders>
-                        <DateHeader unit="day" labelFormat="YYYY/MM/DD" />
-                        <DateHeader unit="hour" labelFormat="HH" />
+                        <DateHeader unit="day" labelFormat="MM/DD" />
+                        <DateHeader unit="hour" labelFormat="HH"></DateHeader>
                     </TimelineHeaders>
                 </Timeline>
 
@@ -341,9 +350,17 @@ const App = () => {
                             </div>
                         );
                     }}
+                    timeSteps={{
+                        second: 0,
+                        minute: 0,
+                        hour: 6, // 👉🏻 mỗi bước 6 tiếng
+                        day: 1,
+                        month: 1,
+                        year: 1,
+                    }}
                 >
                     <TimelineHeaders>
-                        <DateHeader unit="day" labelFormat="YYYY/MM/DD" />
+                        <DateHeader unit="day" labelFormat="MM/DD" />
                         <DateHeader unit="hour" labelFormat="HH" />
                     </TimelineHeaders>
                 </Timeline>
@@ -376,9 +393,17 @@ const App = () => {
                             </div>
                         );
                     }}
+                    timeSteps={{
+                        second: 0,
+                        minute: 0,
+                        hour: 6, // 👉🏻 mỗi bước 6 tiếng
+                        day: 1,
+                        month: 1,
+                        year: 1,
+                    }}
                 >
                     <TimelineHeaders>
-                        <DateHeader unit="day" labelFormat="YYYY/MM/DD" />
+                        <DateHeader unit="day" labelFormat="MM/DD" />
                         <DateHeader unit="hour" labelFormat="HH" />
                     </TimelineHeaders>
                 </Timeline>

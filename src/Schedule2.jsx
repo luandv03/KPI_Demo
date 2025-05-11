@@ -1,8 +1,8 @@
 import React from "react";
-import monthlySchedule from "../../../KPI/tour/monthly_schedule.json"; // Lịch đăng ký
-import assignedSchedule from "../../../KPI/tour/schedule.json"; // Lịch phân công
+import monthlySchedule from "../../../KPI/tour/monthly_schedule2.json"; // Lịch đăng ký
+import assignedSchedule from "../../../KPI/tour/schedule_worst.json"; // Lịch phân công
 
-const Schedule = () => {
+const Schedule2 = () => {
     // Tạo danh sách header từ dữ liệu đăng ký
     const generateHeaders = (data) => {
         return data.flatMap((daySchedule) =>
@@ -110,4 +110,4 @@ const Schedule = () => {
     );
 };
 
-export default Schedule;
+export default Schedule2;

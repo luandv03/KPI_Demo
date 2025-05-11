@@ -3,8 +3,8 @@ import Timeline, { TimelineHeaders, DateHeader } from "react-calendar-timeline";
 import "react-calendar-timeline/dist/Timeline.scss";
 import moment from "moment";
 
-import scheduleData from "../../../KPI/tour/schedule.json";
-import inputData from "../../../KPI/tour/input-thieu-may.json";
+import scheduleData from "../../../KPI/tour/schedule_worst.json";
+import inputData from "../../../KPI/tour/input6.json";
 
 // const shiftTimes = {
 //     1: { start: "00:00", end: "05:30" },
@@ -218,7 +218,7 @@ const processWorkerAndAssetData = (commandId = "All") => {
     };
 };
 
-const App = () => {
+const App2 = () => {
     // Lấy danh sách các lệnh sản xuất từ dữ liệu
     const commandIds = [
         "All",
@@ -246,6 +246,7 @@ const App = () => {
     return (
         <div>
             <div className="select-container">
+                <h3>Cách chia lịch tồi</h3>
                 <label htmlFor="command-select">Chọn lệnh sản xuất: </label>
                 <select
                     id="command-select"
@@ -508,4 +509,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default App2;

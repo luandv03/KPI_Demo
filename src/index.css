@@ -76,7 +76,7 @@
 
 .schedule-container {
     overflow: auto; /* Cho phép cuộn cả chiều ngang và dọc */
-    max-height: 600px; /* Đặt chiều cao tối đa cho bảng */
+    max-height: 100vh;
 }
 
 .schedule-container table {
@@ -127,6 +127,7 @@
 /* CSS FOR KPI */
 .kpi-list-container {
     margin: 20px;
+    margin-top: 58px;
     font-family: Arial, sans-serif;
 }
 
@@ -149,5 +150,28 @@
 }
 
 .kpi-list-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.production-order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.production-order-table th,
+.production-order-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.production-order-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.production-order-table tr:nth-child(even) {
     background-color: #f9f9f9;
 }

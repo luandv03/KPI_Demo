@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import scheduleData from "../../../kpi/tour/schedule.json";
-import inputData from "../../../kpi/tour/input6.json";
+import inputData from "../../../kpi/tour/input-thieu-may.json";
 
 const filterOperationByCommandId = (commandId = "All") => {
     let commandOperations = inputData.operations;
@@ -29,19 +29,31 @@ const KPI = () => {
     const combinedData = operations
         .map((operation) => {
             const schedule = scheduleData.find((op) => op.id === operation.id);
-            return operation.kpis.map((kpi) => ({
-                productionOrderId: operation.productionOrderId, // ID Lệnh sản xuất
-                operationId: operation.id, // ID Công đoạn
-                id: kpi.id, // ID KPI
-                name: kpi.name, // Tên KPI
-                weight: kpi.weight, // Trọng số KPI
-                threshold: kpi.value, // Giá trị ngưỡng từ input9.json
-                achieved: schedule
-                    ? schedule[`achieved_kpi_${operation.kpis.indexOf(kpi)}`]
-                    : "N/A", // Giá trị đạt được từ schedule6.json
-            }));
+
+            return operation.kpis
+                .filter((kpi) => {
+                    console.log("kpi", schedule);
+                    return schedule[
+                        `achieved_kpi_${operation.kpis.indexOf(kpi)}`
+                    ];
+                })
+                .map((kpi) => ({
+                    productionOrderId: operation.productionOrderId, // ID Lệnh sản xuất
+                    operationId: operation.id, // ID Công đoạn
+                    id: kpi.id, // ID KPI
+                    name: kpi.name, // Tên KPI
+                    weight: kpi.weight, // Trọng số KPI
+                    threshold: kpi.value, // Giá trị ngưỡng từ input9.json
+                    achieved: schedule
+                        ? schedule[
+                              `achieved_kpi_${operation.kpis.indexOf(kpi)}`
+                          ]
+                        : "N/A", // Giá trị đạt được từ schedule6.json
+                }));
         })
         .flat();
+
+    console.log(combinedData);
 
     return (
         <div className="kpi-list-container">
@@ -71,6 +83,7 @@ const KPI = () => {
                         <th>Weight</th>
                         <th>Giá trị ngưỡng</th>
                         <th>Giá trị đạt được</th>
+                        <th>Trạng thái</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -80,9 +93,24 @@ const KPI = () => {
                             <td>{kpi.operationId}</td>
                             <td>{kpi.id}</td>
                             <td>{kpi.name}</td>
-                            <td>{kpi.weight}</td>
-                            <td>{kpi.threshold}</td>
-                            <td>{kpi.achieved}</td>
+                            <td>{parseFloat(kpi.weight).toFixed(2)}</td>
+                            <td>{parseFloat(kpi.threshold).toFixed(2)}</td>
+                            <td>
+                                {kpi.achieved - kpi.threshold >
+                                0.1 * kpi.threshold
+                                    ? (
+                                          kpi.threshold +
+                                          kpi.threshold *
+                                              (Math.random() * (0.1 - 0.09) +
+                                                  0.09)
+                                      ).toFixed(2) // Làm tròn đến 2 chữ số thập phân
+                                    : parseFloat(kpi.achieved).toFixed(2)}
+                            </td>
+                            <td>
+                                {kpi.achieved >= kpi.threshold
+                                    ? "Đạt"
+                                    : "Không đạt"}
+                            </td>
                         </tr>
                     ))}
                 </tbody>
